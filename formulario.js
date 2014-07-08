@@ -10,6 +10,11 @@ var $form = $('#formulario'),
 		$url.val(sessionStorage.getItem('url'));
 	}
 
+	var id = setInterval(function(){
+		sessionStorage.setItem('titulo', $titulo.val());
+		sessionStorage.setItem('url', $url.val());
+	}, 1000);
+
 function mostrarformulario(){
 	$form.slideToggle();
 	$list.slideToggle();
