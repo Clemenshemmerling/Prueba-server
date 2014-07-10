@@ -12,4 +12,4 @@ function geo_exito(posicion) {
 	$('#geo').append(mapa);
 }
 
-geo.getCurrentPosition(geo_exito, geo_erro, opciones);
+geo.getCurrentPosition(geo_exito, geo_error, opciones);
