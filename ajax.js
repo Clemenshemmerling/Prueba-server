@@ -3,7 +3,11 @@ $(function(){
 		$('footer').append(html);
 	});
 	$.get('usuario.json', function(info){
-		console.log(info);
+		var avatar = new image();
+		avatar.src = info.avatar;
+		avatar.title = info.nombre+' '+info.apellido;
 
+		$('#avatar')append(avatar);
+		
 	});
 });
