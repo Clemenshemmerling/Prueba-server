@@ -7,7 +7,7 @@ $(function(){
 		avatar.src = info.avatar;
 		avatar.title = info.nombre+' '+info.apellido;
 
-		$('#avatar')append(avatar);
+		$('#avatar').append(avatar);
 		
 	});
 });
