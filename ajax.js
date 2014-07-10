@@ -3,7 +3,7 @@ $(function(){
 		$('footer').append(html);
 	});
 	$.get('usuario.json', function(info){
-		var avatar = new image();
+		var avatar = new Image();
 		avatar.src = info.avatar;
 		avatar.title = info.nombre+' '+info.apellido;
 
