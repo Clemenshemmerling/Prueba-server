@@ -1,1 +1,5 @@
-usuario.json
+{
+	"nombre": "Clemens",
+	"apellido": "Hemmerling",
+	"avatar": "avatar.jpeg"
+}
