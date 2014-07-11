@@ -36,7 +36,23 @@ function procesarGeoInfo(datos) {
 	$('#geo').prepend('<p><strong>'+barrio+'</strong><br>'+ciudad+', '+pais+'</p>');
 
 	obtenerClima(woeid);
-
-
 }
 
+function obtenerClima(woeid) {
+	var query = 'SELECT * FROM weather.forecast WHERE woeid="'+woeid'"';
+	query = encodeURIComponent(query);
+
+	$.ajax({
+		url: base_url+"q="+query,
+		dataType: 'jsonp',
+		jsonpCallback: 'procesarClima',
+		data: {
+			format: 'json'
+		}
+	});
+}
+
+function procesarClima(datos){
+	console.log(datos);
+
+}
