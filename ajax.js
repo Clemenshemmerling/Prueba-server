@@ -39,7 +39,7 @@ function procesarGeoInfo(datos) {
 }
 
 function obtenerClima(woeid) {
-	var query = 'SELECT * FROM weather.forecast WHERE woeid="'+woeid+'"';
+	var query = 'SELECT * FROM weather.forecast WHERE woeid="'+woeid+'"AND u="c"';
 	query = encodeURIComponent(query);
 
 	$.ajax({
@@ -53,6 +53,10 @@ function obtenerClima(woeid) {
 }
 
 function procesarClima(datos){
-	console.log(datos);
+	var clima = datos.query.results.channel;
+	var temp  = clima.item.condition.temp;
+	var unit  = clima.units.temperature;
+
+	$('#clima').appned(clima.item.description);
 
 }
