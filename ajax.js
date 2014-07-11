@@ -17,8 +17,8 @@ function obtenerGeoInformacion(lat, lon) {
 	query = encodeURIComponent(query);
 
 	$.ajax({
-		url: base_url+"q="+	query,
-		dataType: 'jasonp',
+		url: base_url+"q="+query,
+		dataType: 'jsonp',
 		jsonpCallback: 'procesarGeoInfo',
 		data: {
 			format: 'json'
