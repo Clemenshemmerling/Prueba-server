@@ -15,6 +15,17 @@ var base_url = "http://query.yahooapis.com/v1/public/yql?";
 function obtenerGeoInformacion(lat, lon) {
 	var query = 'SELECT * FROM geo.placefinder WHERE text="'+lat+','+lon+'" AND gflags="R"';
 	query = encodeURIComponent(query);
-	console.log(query);
 
+	$.ajax({
+		url: base_url+"q="+	query,
+		dataType: 'jasonp',
+		jsonpCallback: 'procesarGeoInfo',
+		data: {
+			format: 'json'
+		}
+	});
+}
+
+function procesarGeoInfo(datos) {
+	console.log(datos);
 }
