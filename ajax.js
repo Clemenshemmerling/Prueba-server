@@ -63,7 +63,7 @@ function procesarClima(datos){
 	console.log(clima);
 
 	$('#clima')
-	.append(img);
+	.append(img)
 	.append(temp+' '+unit+'°');
 
 }
