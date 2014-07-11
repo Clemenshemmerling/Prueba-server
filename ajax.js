@@ -57,6 +57,8 @@ function procesarClima(datos){
 	var temp  = clima.item.condition.temp;
 	var unit  = clima.units.temperature;
 
+	console.log(clima);
+
 	$('#clima').append(clima.item.description);
 
 }
