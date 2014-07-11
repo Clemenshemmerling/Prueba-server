@@ -39,7 +39,7 @@ function procesarGeoInfo(datos) {
 }
 
 function obtenerClima(woeid) {
-	var query = 'SELECT * FROM weather.forecast WHERE woeid="'+woeid'"';
+	var query = 'SELECT * FROM weather.forecast WHERE woeid="'+woeid+'"';
 	query = encodeURIComponent(query);
 
 	$.ajax({
