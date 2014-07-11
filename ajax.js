@@ -31,7 +31,12 @@ function procesarGeoInfo(datos) {
 	var barrio = res.neighborhood;
 	var ciudad = res.city;
 	var pais   = res.country;
+	var woeid  = res.woeid;
 
-	$('#geo').append('<p><strong>'+barrio+'</strong><br>'+ciudad+', '+pais+'</p>');
+	$('#geo').prepend('<p><strong>'+barrio+'</strong><br>'+ciudad+', '+pais+'</p>');
+
+	obtenerClima(woeid);
+
 
 }
+
