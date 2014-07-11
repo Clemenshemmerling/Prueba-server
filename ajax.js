@@ -56,9 +56,14 @@ function procesarClima(datos){
 	var clima = datos.query.results.channel;
 	var temp  = clima.item.condition.temp;
 	var unit  = clima.units.temperature;
+	var cond  = clima.item.condition.code;
+	var img   = new Image();
+	img.src   = "http://l.yimg.com/a/i/us/we/52/"+code+".gif"
 
 	console.log(clima);
 
-	$('#clima').append(clima.item.description);
+	$('#clima')
+	.append(img);
+	.append(temp+' '+unit+'°');
 
 }
