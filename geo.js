@@ -13,7 +13,7 @@ $(function(){
 		mapa.src = "http://maps.googleapis.com/maps/api/staticmap?maptype=hybrid&zoom=13&size=300x300&sensor=false&center="+lat+","+lon;
 		$('#geo').append(mapa);
 
-		window.lat = lat; window.lon = lon;
+		obtenerGeoInformacion(lat, lon)
 }
 
 	geo.getCurrentPosition(geo_exito, geo_error, opciones);
